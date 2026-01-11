@@ -17,11 +17,11 @@ func LoadConfig() *Config {
     _ = godotenv.Load()
     
     return &Config{
-        Port:       getEnv("PORT", "8080"),
-        MongoDBURI: getEnv("MONGODB_URI", "mongodb://localhost:27017"),
-        DBName:     getEnv("DB_NAME", "ecommerce"),
-        JWTSecret:  getEnv("JWT_SECRET", "your-secret-key"),
-        JWTExpiry:  getEnv("JWT_EXPIRY", "24h"),
+        Port:       getEnv("PORT"),
+        MongoDBURI: getEnv("MONGODB_URI"),
+        DBName:     getEnv("DB_NAME"),
+        JWTSecret:  getEnv("JWT_SECRET"),
+        JWTExpiry:  getEnv("JWT_EXPIRY"),
     }
 }
 
